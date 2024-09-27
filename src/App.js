@@ -1,8 +1,10 @@
-function App() {
+import Container from "./styles";
+
+const App = () => {
   return (
-    <div className="App">
+    <Container>
       <h1>Simple Calculator</h1>
-    </div>
+    </Container>
   );
 }
 
