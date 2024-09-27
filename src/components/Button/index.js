@@ -1,8 +1,10 @@
-function Button(props) {
-  const { title } = props
+import ButtonContainer from "./styles"
+
+const Button = (props) => {
+  const { label, onClick } = props
   
   return (
-    <button>{title}</button>
+    <ButtonContainer onClick={onClick}>{label}</ButtonContainer>
   )
 }
 

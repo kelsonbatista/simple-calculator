@@ -1,9 +1,15 @@
-function Display(props) {
-  const { title } = props
-  
+import DisplayContainer from "./styles";
+
+const Display = (props) => {
+  const { value } = props;
+
   return (
-    <div>Display { title }</div>
-  )
+    <>
+      <DisplayContainer>
+        <input disabled value={value} />
+      </DisplayContainer>
+    </>
+  );
 }
 
 export default Display
