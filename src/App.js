@@ -9,7 +9,7 @@ const App = () => {
   const [action, setAction] = useState('');
 
   const handleCurrentNumber = (number) => {
-    setCurrentNumber((prev) => `${prev === 0 ? '' : prev}${number}`);
+    setCurrentNumber((prev) => `${(prev === 0) ? '' : prev}${number}`);
   }
 
   const handleOnClear = () => {
@@ -17,6 +17,8 @@ const App = () => {
   }
 
   const handleEqualTo = () => {
+    handleOnClear();
+
     if (action === "+") {
       handleSum();
     } else if (action === "-") {
@@ -35,25 +37,21 @@ const App = () => {
   };
 
   const handleSum = () => {
-    handleOnClear();
     const sum = Number(firstNumber) + Number(currentNumber);
     setCurrentNumber(sum);
   };
 
   const handleSub = () => {
-    handleOnClear();
     const sum = Number(firstNumber) - Number(currentNumber);
     setCurrentNumber(sum);
   };
 
   const handleDiv = () => {
-    handleOnClear();
     const sum = Number(firstNumber) / Number(currentNumber);
     setCurrentNumber(sum);
   };
 
   const handleMult = () => {
-    handleOnClear();
     const sum = Number(firstNumber) * Number(currentNumber);
     setCurrentNumber(sum);
   };
